@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-color: #1c1c1c;
+}
+
+.title h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.desc p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    cursor: default;
+}
+
+.gallery p {
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.gallery a {
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.gallery:hover {
+    cursor: default;
+}
+.gallery a:hover {
+    color: purple;
+    text-decoration: underline;
+    cursor: default;
+}
+.image {
+    display: flex;
+    justify-content: center;
+}
+.randombutton {
+    text-align: center;
+    cursor: default;
+}
+
+.randombutton button {
+    font-family: 'montserrat', sans-serif;
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+}
+
+.randombutton button:hover {
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgb(197, 71, 197);
+}
+
+.image img {
+    border-radius: 15px;
+}
+
+.creds {
+    padding-top: 15px;
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    cursor: default;
+}
