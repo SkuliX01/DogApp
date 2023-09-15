@@ -42,12 +42,14 @@ body {
     display: flex;
     justify-content: center;
 }
-.randombutton {
+.random-button {
     text-align: center;
     cursor: default;
 }
 
-.randombutton button {
+.random-button button {
+    animation-name: buttonFadeOut;
+    animation-duration: 1.5s;
     font-family: 'montserrat', sans-serif;
     width: 150px;
     height: 35px;
@@ -55,20 +57,77 @@ body {
     border: none;
 }
 
-.randombutton button:hover {
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: rgb(197, 71, 197);
+.random-button button:hover {
+    animation: buttonFadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .image img {
+    animation: zoomOutImage;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     border-radius: 15px;
 }
 
-.creds {
+.image img:hover {
+    animation: zoomImage;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.credentials {
     padding-top: 15px;
     font-family: 'montserrat', sans-serif;
     color: #fff;
     text-align: center;
     cursor: default;
+}
+
+@keyframes buttonFadeIn {
+    from {
+        background-color: #fff;
+    }
+    to {
+        transition: background-color 0.5s ease;
+        background-color: #62cffe;
+        transition: scale 0.5s ease;
+        scale: 110%;
+    }
+}
+
+@keyframes buttonFadeOut {
+    from {
+        background-color: #62cffe;
+        transition: scale 0.5s ease;
+        scale: 110%;
+    }
+    to {
+        transition: background-color 0.5s ease;
+        background-color: #fff;
+        transition: scale 0.5s ease;
+        scale: 100%;
+    }
+}
+
+
+@keyframes zoomImage {
+    from {
+        scale: 100%;
+    }
+    to{
+        transition: scale 0.5s ease;
+        scale: 103%;
+    }
+}
+
+@keyframes zoomOutImage {
+    from {
+        scale: 103%;
+    }
+    to {
+        transition: scale 0.5s ease;
+        scale: 100%;
+    }
 }
